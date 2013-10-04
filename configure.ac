@@ -35,7 +35,7 @@ AS_IF(
     [test "x$panel" = xgnome3],
         [PKG_CHECK_MODULES(LIBPANEL, libpanelapplet-4.0 >= 3.0.0)]
         LIBPANEL_APPLET_DIR=`$PKG_CONFIG --variable=libpanel_applet_dir libpanelapplet-4.0`
-        PLUGIN_DIR=`$PKG_CONFIG --variable=prefix libpanelapplet-4.0`/libexec
+        PLUGIN_DIR=`$PKG_CONFIG --variable=prefix libpanelapplet-4.0`/lib/gnome-applets
         [AC_DEFINE(PANEL_GNOME, 1, [panel type])]
         [AC_DEFINE(PANEL_GNOME3, 1, [panel type])]
         ,
